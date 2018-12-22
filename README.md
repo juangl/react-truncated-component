@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save truncated-component
+npm install --save react-truncated-component
 ```
 
 ## Usage
