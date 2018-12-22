@@ -4,6 +4,7 @@ import * as React from "react";
 import ResultBox from "./resultBox";
 import { getLevelInfo } from "./treeUtils";
 import updater from "./updater";
+import { didContentChange } from "./utils";
 import type { TruncatedComponentProps, TruncatedComponentState } from "./types";
 
 class TruncatedComponent extends React.Component<
@@ -35,12 +36,25 @@ class TruncatedComponent extends React.Component<
     if (isTruncationCompleted && !prevState.isTruncationCompleted) {
       this.callOnTruncate();
     }
+
+    this.reRunTruncationIfNeeded(prevProps);
   }
 
   componentWillUnmount() {
     const { cacheKey } = this.props;
     if (!this.state.isTruncationCompleted) {
       updater.clearCache(cacheKey);
+    }
+  }
+
+  reRunTruncationIfNeeded(prevProps: TruncatedComponentProps) {
+    if (
+      didContentChange(prevProps, this.props) ||
+      this.props.numberOfLines !== prevProps.numberOfLines
+    ) {
+      this.setState(
+        updater.getInitialState(this.props.children, this.props.cacheKey),
+      );
     }
   }
 

@@ -1,6 +1,8 @@
 // @flow
 import * as React from "react";
 
+import { didContentChange } from "./utils";
+
 const getChildrenInArray = element => {
   const { children } = element.props;
   return React.Children.toArray(children);
@@ -36,13 +38,6 @@ type Props = {|
   shouldMeasure: boolean,
   isTruncated: boolean,
 |};
-
-function didContentChange(currentProps, nextProps) {
-  return (
-    currentProps.ellipsis !== nextProps.ellipsis ||
-    currentProps.children !== nextProps.children
-  );
-}
 
 class ResultBox extends React.Component<Props> {
   paragraphRefs = [];
