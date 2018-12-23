@@ -16,12 +16,12 @@ export function isIterableChildren(node: React.Node): boolean %checks {
   return Array.isArray(node) || typeof node === "string";
 }
 
-export function getChildren(node: React.Node): Array<React.Node> | null {
+export function getChildren(node: React.Node): ?Array<any> {
   if (
     node &&
     React.isValidElement(node) &&
-    // in the next line node.props couldn't be
-    // access because props is missing in React.Portal
+    // in the next line node.props couldn't be access
+    // because props is missing in React.Portal
     // $FlowFixMe
     node.props &&
     node.props.children
@@ -94,11 +94,11 @@ export function truncateLevel(
   level: number,
   index: number = -1,
 ) {
-  function truncateNode(node: React.Node, currentLevel: number) {
+  function truncateNode(node: React.Node, currentLevel: number): ?React.Node {
     let newChildren = React.isValidElement(node) ? getChildren(node) : node;
 
     if (currentLevel === level) {
-      if (isIterableChildren(newChildren)) {
+      if (newChildren && isIterableChildren(newChildren)) {
         newChildren = newChildren.slice(0, index);
       }
     } else if (Array.isArray(newChildren) && newChildren.length > 0) {
@@ -109,8 +109,10 @@ export function truncateLevel(
     }
 
     if (React.isValidElement(node)) {
+      // $FlowFixMe if node is a element, newChildren should be an array
+      newChildren = newChildren.filter(Boolean);
       // children array is empty
-      if (Array.isArray(newChildren) && newChildren.length < 1) {
+      if (newChildren.filter(Boolean).length < 1) {
         return null;
       }
 
@@ -136,9 +138,9 @@ export function truncateLevel(
         { children: undefined },
         newChildren,
       );
-    } else {
-      return newChildren;
     }
+
+    return newChildren;
   }
 
   const truncatedRoot = truncateNode(<>{tree}</>, 0);

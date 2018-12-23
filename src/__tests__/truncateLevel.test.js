@@ -88,4 +88,18 @@ Array [
 </p>
 `);
   });
+
+  test("truncateLevel removes void elements", () => {
+    const tree = (
+      <>
+        <p>
+          <p>text</p>
+        </p>
+      </>
+    );
+
+    const childrenArray = tree.props.children;
+
+    expect(truncateLevel(childrenArray, 2)).toMatchInlineSnapshot(`null`);
+  });
 });
