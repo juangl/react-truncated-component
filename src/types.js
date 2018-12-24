@@ -19,7 +19,6 @@ export type TruncatedComponentProps = {|
   children: React.Node,
   ellipsis: React.Node,
   onTruncate: onTruncateEvent,
-  voidElements: Array<React.ElementType>,
   cacheKey?: any,
   lineHeight: number,
 |};

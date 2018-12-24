@@ -14,7 +14,6 @@ class TruncatedComponent extends React.Component<
   static defaultProps = {
     numberOfLines: undefined,
     onTruncate: () => {},
-    voidElements: [],
     ellipsis: "...",
   };
 
