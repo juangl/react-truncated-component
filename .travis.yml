@@ -9,6 +9,7 @@ cache:
   - node_modules
 script:
   - npm test
+  - npm run predeploy
 deploy:
   - provider: npm
     email: $NPM_EMAIL
