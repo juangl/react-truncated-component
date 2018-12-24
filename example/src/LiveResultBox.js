@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const LiveResultBox = styled.div`
-  margin-top: 20px;
   margin-bottom: 30px;
   width: 500px;
   background-color: #fff;

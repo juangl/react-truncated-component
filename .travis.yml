@@ -10,10 +10,16 @@ cache:
 script:
   - npm test
 deploy:
-  provider: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_AUTH_TOKEN
-  skip_cleanup: true
-  on:
-    tags: true
-    branch: master
+  - provider: npm
+    email: $NPM_EMAIL
+    api_key: $NPM_AUTH_TOKEN
+    skip_cleanup: true
+    on:
+      tags: true
+      branch: master
+  - provider: pages
+    local-dir: example/build
+    skip_cleanup: true
+    github-token: $GITHUB_AUTH_TOKEN
+    on:
+      branch: master
