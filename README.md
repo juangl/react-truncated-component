@@ -12,7 +12,7 @@
   <br />
 </div>
 
-[![NPM](https://img.shields.io/npm/v/react-truncate-format.svg)](https://www.npmjs.com/package/react-truncate-format)
+[![NPM](https://img.shields.io/npm/v/react-truncate-format.svg)](https://www.npmjs.com/package/react-truncate-format) [![Build](https://travis-ci.org/juangl/react-truncated-component.svg?branch=master)](https://travis-ci.org/juangl/react-truncated-component)
 
 ## Install
 

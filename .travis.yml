@@ -1,4 +1,13 @@
+sudo: false
 language: node_js
 node_js:
-  - 9
-  - 8
+  - stable
+script:
+  - npm test
+deploy:
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_AUTH_TOKEN
+  on:
+    tags: true
+    branch: master
