@@ -1,6 +1,16 @@
-# react-truncate-format
+<div align="center">
+  <a href="https://juangl.github.io/react-truncated-component/">
+    <img alt="styled-components" src="https://juangl.github.io/react-truncated-component/static/media/logo.daaa9134.png" height="82px" />
+  </a>
+</div>
 
-> A React component to truncate text with format
+<br />
+
+<div align="center">
+  <strong>React component to truncate your text with format paragraphs support included.</strong>
+  <br />
+  <br />
+</div>
 
 [![NPM](https://img.shields.io/npm/v/react-truncate-format.svg)](https://www.npmjs.com/package/react-truncate-format)
 
