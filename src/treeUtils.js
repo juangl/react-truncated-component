@@ -109,17 +109,16 @@ export function truncateLevel(
     }
 
     if (React.isValidElement(node)) {
-      // $FlowFixMe if node is a element, newChildren should be an array
-      newChildren = newChildren.filter(Boolean);
-      // children array is empty
-      if (newChildren.filter(Boolean).length < 1) {
-        return null;
-      }
-
-      // children is an array
+      // if children is an array
       if (Array.isArray(newChildren)) {
+        // remove falsy children
+        newChildren = newChildren.filter(Boolean);
+        // discards node if children is empty (leaf node)
+        if (newChildren.filter(Boolean).length < 1) {
+          return null;
+        }
         return React.cloneElement(
-          // $FlowFixMe
+          // $FlowFixMe node is validated as a valid element above
           node,
           { children: undefined },
           ...newChildren,
