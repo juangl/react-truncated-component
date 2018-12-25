@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ReactComponent as GithubLogo } from "./github.svg";
+import GithubLogo from "./githubLogo";
 
 const Container = styled.div`
   position: fixed;

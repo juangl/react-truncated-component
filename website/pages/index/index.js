@@ -1,16 +1,29 @@
 import React, { Component } from "react";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 
-import ReactTruncateFormat from "react-truncated-component";
-
-import TopBar from "./TopBar";
-import NumberOfLinesInput from "./NumberOfLinesInput";
-import Container from "./Container";
+import TopBar from "./topBar";
+import NumberOfLinesInput from "./numberOfLinesInput";
+import Container from "./container";
 import Logo from "./logo";
-import LiveResultBox from "./LiveResultBox";
-import SiteTitle from "./SiteTitle";
+import LiveResultBox from "./liveResultBox";
+import SiteTitle from "./siteTitle";
 import TruncationEnabled from "./truncationEnabled";
-import LiveSettingsContainer from "./LiveSettingsContainer";
-import Ellipsis from "./Ellipsis";
+import LiveSettingsContainer from "./liveSettingsContainer";
+import Ellipsis from "./ellipsis";
+
+const ReactTruncateFormat = dynamic(() => import("react-truncated-component"), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        // use a div with the height of a paragraph with
+        // 5 lines (lineHeight * 5 + padding)  as placeholder
+        height: 132,
+      }}
+    />
+  ),
+});
 
 export default class App extends Component {
   state = {
@@ -27,6 +40,9 @@ export default class App extends Component {
   render() {
     return (
       <Container>
+        <Head>
+          <title>React Truncated Component</title>
+        </Head>
         <TopBar />
         <Logo />
 

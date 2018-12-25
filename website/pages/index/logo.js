@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Logo = styled.img.attrs({
-  src: require("./logo.png"),
+  src: "/static/logo.png",
   alt: "React Truncate Component",
 })`
   width: 252px;
