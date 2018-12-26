@@ -22,18 +22,26 @@ npm install --save react-truncated-component
 
 ## Usage
 
-```jsx
-import React, { Component } from "react";
+```javascript
+function TruncatedText() {
+  return (
+    <ReactTruncateFormat ellipsis="..." numberOfLines={5} lineHeight={23}>
+      <p>{/*
 
-import MyComponent from "react-truncate-format";
 
-class Example extends Component {
-  render() {
-    return <MyComponent />;
-  }
+    put your long text right here
+
+
+    */}</p>
+    </ReactTruncateFormat>
+  );
 }
 ```
 
+## Docs
+
+[To see the documentation visit the website.](https://react-truncated-component.now.sh)
+
 ## License
 
-MIT © [juangl](https://github.com/juangl)
+MIT © [Juan Garcia](https://github.com/juangl)
