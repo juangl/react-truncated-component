@@ -18,9 +18,3 @@ deploy:
     on:
       tags: true
       branch: master
-  - provider: pages
-    local-dir: example/build
-    skip_cleanup: true
-    github-token: $GITHUB_AUTH_TOKEN
-    on:
-      branch: master

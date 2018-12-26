@@ -19,8 +19,6 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build",
     "prettier": "prettier --write '**/*.{js,json,css,md}'",
     "eslint-check-config": "eslint --print-config . | eslint-config-prettier-check",
     "lint": "eslint src"
@@ -63,7 +61,6 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.89.0",
-    "gh-pages": "^1.2.0",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
     "prettier": "1.15.3",
