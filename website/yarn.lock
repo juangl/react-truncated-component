@@ -9013,10 +9013,10 @@ react-scripts@^2.1.1:
   optionalDependencies:
     fsevents "1.2.4"
 
-react-truncated-component@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-truncated-component/-/react-truncated-component-1.0.2.tgz#034cc4c61a638ddd7e8124d202a21e525a0ab45d"
-  integrity sha512-/Xfi6qpc/ZGWtZzv3QKonBhDQMMbLY5OmFrxQZrj85JYthEMKdpZh2b7hyLaO2UpUjdWUcX3V/AS++pGxH40sQ==
+react-truncated-component@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-truncated-component/-/react-truncated-component-1.0.3.tgz#171633f98b34ff64b424091966629b729e0f83f3"
+  integrity sha512-DBbUekzfjpfq0eNTNCxekZk/4a+e1gE/ipGY7NF4Nx7ud5HBNEPOVupcQ+OApDhWvQqNItSWZc0M8Ywy5XEEAg==
 
 react-typography@^0.16.18:
   version "0.16.18"
