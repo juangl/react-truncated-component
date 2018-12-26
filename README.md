@@ -7,7 +7,7 @@
 <br />
 
 <div align="center">
-  <strong>React component to truncate your text with format paragraphs support included.</strong>
+  <strong>React component to truncate your text with format and paragraphs support included.</strong>
   <br />
   <br />
 </div>
