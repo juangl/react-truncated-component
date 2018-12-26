@@ -23,7 +23,7 @@ const Subtitle = styled.h2`
 function IntroTitle() {
   return (
     <Container>
-      <Title>React component to truncate your text</Title>
+      <Title>React component to truncate text</Title>
       <Subtitle>With format and paragraphs support included</Subtitle>
     </Container>
   );
