@@ -6,14 +6,22 @@ const { PHASE_PRODUCTION_SERVER } =
     ? require("next/constants")
     : require("next-server/constants");
 
-module.exports = (phase, { defaultConfig }) => {
+module.exports = (phase, ...rest) => {
   if (phase === PHASE_PRODUCTION_SERVER) {
     // Config used to run in production.
     return {};
   }
 
-  const withMDX = require("@zeit/next-mdx")({
+  const withPlugins = require("next-compose-plugins");
+  const css = require("@zeit/next-css");
+  const mdx = require("@zeit/next-mdx");
+
+  const withMDX = mdx({
     extension: /\.(md|mdx)$/,
+    options: {
+      hastPlugins: [require("@mapbox/rehype-prism")],
+    },
   });
-  return withMDX();
+
+  return withPlugins([[withMDX], [css]])(phase, ...rest);
 };

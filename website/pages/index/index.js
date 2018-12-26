@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Head from "next/head";
 
+import "./prism.css";
+
 import TopBar from "./topBar";
 import Docs from "./docs.md";
 import IntroContainer from "./introContainer";
