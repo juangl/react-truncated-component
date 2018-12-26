@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://juangl.github.io/react-truncated-component/">
-    <img alt="styled-components" src="https://juangl.github.io/react-truncated-component/static/media/logo.daaa9134.png" height="82px" />
+    <img alt="styled-components" src="https://react-truncated-component.now.sh/static/logo.png" height="83px" />
   </a>
 </div>
 

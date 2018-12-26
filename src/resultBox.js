@@ -65,9 +65,7 @@ class ResultBox extends React.Component<Props> {
     const children = this.containerRef ? this.containerRef.children : [];
 
     for (const paragraph of children) {
-      let containerheight = Math.floor(
-        paragraph.getBoundingClientRect().height,
-      );
+      let containerheight = Math.floor(paragraph.clientHeight);
       measureByParagraph.push(containerheight);
     }
 
