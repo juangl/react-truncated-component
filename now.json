@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "alias": "react-truncated-component.now.sh",
+  "name": "react-truncated-component",
+  "builds": [{ "src": "website/next.config.js", "use": "@now/next" }],
+  "routes": [{ "src": "/(.*)", "dest": "/website/$1" }]
+}
