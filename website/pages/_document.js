@@ -15,18 +15,18 @@ const typography = new Typography(SternGroveTheme);
 
 const GlobalStyle = createGlobalStyle`
   html {
-          box-sizing: border-box;
-        }
-        *,
-        *:before,
-        *:after {
-          box-sizing: inherit;
-        }
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 
-        body {
-          margin: 0;
-          padding: 0;
-        }
+  body {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export default class MyDocument extends Document {
@@ -43,6 +43,10 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1 shrink-to-fit"
+          />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <TypographyStyle typography={typography} />
           <GoogleFont typography={typography} />

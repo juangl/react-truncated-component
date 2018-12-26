@@ -5,9 +5,9 @@ import TopBar from "./topBar";
 
 import IntroContainer from "./introContainer";
 import Logo from "./logo";
-import SiteTitle from "./siteTitle";
+import IntroTitle from "./introTitle";
 import LiveResult from "./liveResult";
-import LiveResultContainer from "./liveResultContainer";
+import IntroContentContainer from "./introContentContainer";
 
 export default class App extends Component {
   render() {
@@ -19,11 +19,11 @@ export default class App extends Component {
             <title>React Truncated Component</title>
           </Head>
 
-          <LiveResultContainer>
+          <IntroContentContainer>
             <Logo />
-            <SiteTitle />
+            <IntroTitle />
             <LiveResult />
-          </LiveResultContainer>
+          </IntroContentContainer>
         </IntroContainer>
       </>
     );

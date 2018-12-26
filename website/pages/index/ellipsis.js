@@ -8,7 +8,7 @@ const Button = styled.button`
   padding: 0;
   font: inherit;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 `;
 
 function Ellipsis(props) {

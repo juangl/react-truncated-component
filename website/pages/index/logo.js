@@ -7,13 +7,14 @@ const LogoImg = styled.img.attrs({
 })`
   width: 251px;
   height: 83px;
+  margin-bottom: 0;
 `;
 
 const Container = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 90px;
 `;
 
 function Logo() {

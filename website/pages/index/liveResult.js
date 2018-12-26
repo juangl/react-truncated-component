@@ -7,6 +7,7 @@ import LiveSettingsContainer from "./liveSettingsContainer";
 import Ellipsis from "./ellipsis";
 import NumberOfLinesInput from "./numberOfLinesInput";
 import LiveResultBox from "./liveResultBox";
+import mediaTemplates from "../../utils/mediaTemplates";
 
 const ReactTruncateFormat = dynamic(() => import("react-truncated-component"), {
   ssr: false,
@@ -24,7 +25,12 @@ const ReactTruncateFormat = dynamic(() => import("react-truncated-component"), {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+
+  ${mediaTemplates.phone`
+    flex-direction: column;
+  `}
 `;
 
 class LiveResult extends React.Component {
