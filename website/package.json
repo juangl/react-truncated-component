@@ -11,7 +11,11 @@
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1",
     "react-truncated-component": "link:..",
-    "styled-components": "^4.1.3"
+    "react-typography": "^0.16.18",
+    "styled-components": "^4.1.3",
+    "typography": "^0.16.18",
+    "typography-plugin-code": "^0.16.18",
+    "typography-theme-stern-grove": "^0.16.18"
   },
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true next start",

@@ -6,11 +6,15 @@ import GithubLogo from "./githubLogo";
 const Container = styled.div`
   position: fixed;
   z-index: 9999;
-  display: flex;
-  justify-content: flex-end;
-  padding: 15px 30px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
+`;
+
+const Nav = styled.nav`
+  padding: 15px 30px;
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
 `;
 
 const StyledLink = styled.a`
@@ -18,20 +22,26 @@ const StyledLink = styled.a`
   text-decoration: none;
 `;
 
+const RightBox = styled.div`
+  margin-left: auto;
+`;
+
 const StyledGithubLogo = styled(GithubLogo)`
   vertical-align: middle;
   width: 25px;
   height: 25px;
-  margin-left: 7px;
   fill: #fff;
 `;
 
 const TopBar = () => (
   <Container>
-    <StyledLink href="https://github.com/juangl/react-truncated-component">
-      <span>GitHub</span>
-      <StyledGithubLogo />
-    </StyledLink>
+    <Nav>
+      <RightBox>
+        <StyledLink href="https://github.com/juangl/react-truncated-component">
+          <StyledGithubLogo />
+        </StyledLink>
+      </RightBox>
+    </Nav>
   </Container>
 );
 

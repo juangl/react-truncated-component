@@ -11,7 +11,7 @@ const Input = styled.input.attrs({
 function TruncationEnabled(props) {
   return (
     <label htmlFor="truncation-enabled">
-      <Input {...props} /> Truncation enabled
+      Truncation enabled: <Input {...props} />
     </label>
   );
 }

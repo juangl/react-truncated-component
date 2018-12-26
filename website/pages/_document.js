@@ -1,6 +1,17 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet, createGlobalStyle } from "styled-components";
+import { TypographyStyle, GoogleFont } from "react-typography";
+import Typography from "typography";
+import CodePlugin from "typography-plugin-code";
+import SternGroveTheme from "typography-theme-stern-grove";
+
+SternGroveTheme.plugins = [
+  new CodePlugin(),
+  () => ({ "p:last-child": { marginBottom: 0 } }),
+];
+
+const typography = new Typography(SternGroveTheme);
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -15,8 +26,6 @@ const GlobalStyle = createGlobalStyle`
         body {
           margin: 0;
           padding: 0;
-          font-family: "Lato", sans-serif;
-          line-height: 1.6;
         }
 `;
 
@@ -35,10 +44,8 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Lato:400,700"
-            rel="stylesheet"
-          />
+          <TypographyStyle typography={typography} />
+          <GoogleFont typography={typography} />
           {this.props.styleTags}
         </Head>
         <body>

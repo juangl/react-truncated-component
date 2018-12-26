@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Input = styled.input.attrs({
   name: "number-of-lines",
-  type: "range",
+  type: "number",
   min: "0",
   max: "13",
 })`
@@ -13,7 +13,7 @@ const Input = styled.input.attrs({
 function NumberOfLinesInput(props) {
   return (
     <label htmlFor="number-of-lines">
-      number of lines: {props.value} <Input {...props} />
+      number of lines: <Input {...props} />
     </label>
   );
 }
