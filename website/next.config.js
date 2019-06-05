@@ -23,5 +23,9 @@ module.exports = (phase, ...rest) => {
     },
   });
 
-  return withPlugins([[withMDX], [css]])(phase, ...rest);
+  let config = withPlugins([[withMDX], [css]], {
+    target: "serverless",
+  })(phase, ...rest);
+
+  return config;
 };
