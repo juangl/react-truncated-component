@@ -31,7 +31,7 @@ npm install --save react-truncated-component
 ```javascript
 function TruncatedText() {
   return (
-    <ReactTruncateFormat ellipsis="..." numberOfLines={5} lineHeight={23}>
+    <ReactTruncatedComponent ellipsis="..." numberOfLines={5} lineHeight={23}>
       <p>{/*
 
 
@@ -39,7 +39,7 @@ function TruncatedText() {
 
 
     */}</p>
-    </ReactTruncateFormat>
+    </ReactTruncatedComponent>
   );
 }
 ```
