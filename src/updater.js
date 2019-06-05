@@ -10,7 +10,8 @@ function getCachedTree(cacheKey, tree) {
   if (cacheKey) {
     const isCached = cache.has(cacheKey);
     if (isCached) {
-      if (cache[cacheKey].length) {
+      const cacheItem = cache.get(cacheKey);
+      if (cacheItem && cacheItem.length) {
         const nextTree = cacheToTree(tree, cache[cacheKey]);
         return nextTree;
       }
@@ -37,7 +38,8 @@ const updater = {
     if (cachedTree) {
       currentTree = cachedTree;
       isTruncationCompleted = true;
-      isTruncated = cachedTree === children;
+
+      isTruncated = cachedTree !== children;
     }
 
     return {
