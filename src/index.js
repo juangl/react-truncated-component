@@ -68,12 +68,12 @@ class TruncatedComponent extends React.Component<
     }, 0);
   }
 
-  // this thing works by implementing something like a binary-serch through
-  // the tree to find the most amount of text to fits in the desired number
+  // this works using a binary-search across each level of the React tree
+  // to find the most amount of text that fits in the desired number
   // of lines.
   // We can think of a React tree as a structure where React.Node is the type
   // of the node and it could have and array of children (`node.props.children`)
-  // and leaf nodes are usually are usually `string`.
+  // and leaf nodes are usually `string`.
   onMeasure = (heightByParagraph: Array<number>) => {
     const { numberOfLines, cacheKey } = this.props;
     const { currentTree, previousTree, level, startOffset } = this.state;
