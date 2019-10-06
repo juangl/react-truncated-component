@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://juangl.github.io/react-truncated-component/">
+  <a href="https://react-truncated-component.now.sh/">
     <img alt="styled-components" src="https://react-truncated-component.now.sh/static/logo.png" height="83px" />
   </a>
 </div>
